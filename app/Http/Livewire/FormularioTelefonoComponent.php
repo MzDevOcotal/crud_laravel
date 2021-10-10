@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Operadora;
 use App\Models\Telefono;
 use Illuminate\Routing\Route;
 use Livewire\Component;
@@ -9,12 +10,8 @@ use Livewire\Component;
 class FormularioTelefonoComponent extends Component
 {
     public Telefono $telefono;
+    public $operadoras;
 
-    public array $operadoras = [
-        'Claro',
-        'Tigo',
-        'Cootel'
-    ];
 
     protected array $rules = [ //pipes
         'telefono.numero' => 'required|numeric',
@@ -22,6 +19,7 @@ class FormularioTelefonoComponent extends Component
     ];
 
     public function mount(){
+        $this->operadoras = Operadora::all();
         $telefono_id = \Route::current()->parameter('id') ?? null;
 
         if($telefono_id){
@@ -63,5 +61,11 @@ class FormularioTelefonoComponent extends Component
 
     public function cancelar(){
         redirect(route("telefonos"));
+    }
+
+    // Método para Eliminar Teléfono
+    public function eliminar(){
+        $this->telefono->delete();
+        $this->cancelar();
     }
 }

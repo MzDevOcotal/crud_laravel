@@ -58,3 +58,31 @@ Route::middleware(['auth:sanctum', 'verified'])
         \App\Http\Livewire\FormularioTelefonoComponent::class
     )
     ->name('telefonos-eliminar');
+
+// Ruta para Operadoras
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/operadoras',
+    \App\Http\Livewire\OperadorasComponent::class
+)
+->name('operadoras');
+
+// Ruta de Operadoras
+Route::middleware(['auth:sanctum', 'verified'])
+    ->get('/administrar-operadoras',
+        \App\Http\Livewire\FormularioOperadoraComponent::class
+    )
+    ->name('operadoras-tareas');
+
+    // Ruta de edición de operadora
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/editar-operadora/{id}',
+    \App\Http\Livewire\FormularioOperadoraComponent::class
+)
+->name('operadoras-editar');
+
+// Ruta de eliminar una operadora
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/eliminar-operadora/{id}',
+    \App\Http\Livewire\FormularioOperadoraComponent::class
+)
+->name('operadoras-eliminar');

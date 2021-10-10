@@ -1,0 +1,6 @@
+1 - Crear tabla por medio de migración - Ok (php artisan make:migration create_categories_table)
+2 - Crear el modelo (operadora) - Ok (php artisan make:model Article)
+3 - Crear la opción en el menú (Archivo de Navegación)
+4 - Crear la Ruta (Archivo de Ruta)
+5 - Crear el componente (livewire) (php artisan make:livewire operadoras_table)
+6 - Crear Datatable (php artisan make:datatable UserTable User)

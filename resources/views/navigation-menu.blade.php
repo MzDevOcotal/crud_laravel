@@ -27,6 +27,11 @@
                         {{ __('Usuarios') }}
                     </x-jet-nav-link>
 
+                     <!-- Menu de Operadoras -->
+                     <x-jet-nav-link href="{{ route('operadoras') }}" :active="request()->routeIs('operadoras')">
+                        {{ __('Operadora') }}
+                    </x-jet-nav-link>
+
                 </div>
             </div>
 
