@@ -86,3 +86,24 @@ Route::middleware(['auth:sanctum', 'verified'])
     \App\Http\Livewire\FormularioOperadoraComponent::class
 )
 ->name('operadoras-eliminar');
+
+// Ruta de Suscriptorews
+Route::middleware(['auth:sanctum', 'verified'])
+    ->get('/suscripciones',
+        \App\Http\Livewire\SuscripcionesComponent::class
+    )
+    ->name('suscripciones');
+
+        // Ruta de edición de suscriptores
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/editar-suscriptor/{id}',
+    \App\Http\Livewire\FormularioOperadoraComponent::class
+)
+->name('suscriptores-editar');
+
+// Ruta de elimina un suscriptor
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/eliminar-suscriptor/{id}',
+    \App\Http\Livewire\FormularioOperadoraComponent::class
+)
+->name('suscriptores-eliminar');

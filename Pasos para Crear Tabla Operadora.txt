@@ -1,3 +1,17 @@
+PASOS PARA CREAR UNA LISTA DE SUSCRIPTORES Y UN FORMULARIO PARA AGREGARLOS
+php artisan make:livewire suscripcionesComponent: Este comando crea 2 archivos una vista que contrendrá el HTML
+y una clase que contiene la lógica.
+
+php artisan make:model <Nombre del Modelo>: Crear un modelo.
+
+composer require rappasoft/laravel-livewire-tables: Sirve para instalar el complementeo para tablas.
+
+Crear la opción en el menú navegación y su ruta correspondiente.    
+
+
+
+
+
 1 - Crear tabla por medio de migración - Ok (php artisan make:migration create_categories_table)
 2 - Crear el modelo (operadora) - Ok (php artisan make:model Article)
 3 - Crear la opción en el menú (Archivo de Navegación)

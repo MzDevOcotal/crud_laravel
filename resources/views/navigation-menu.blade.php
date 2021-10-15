@@ -32,6 +32,11 @@
                         {{ __('Operadora') }}
                     </x-jet-nav-link>
 
+                     <!-- Menu de Suscripciones -->
+                     <x-jet-nav-link href="{{ route('suscripciones') }}" :active="request()->routeIs('suscripciones')">
+                        {{ __('Suscripciones') }}
+                    </x-jet-nav-link>
+
                 </div>
             </div>
 
