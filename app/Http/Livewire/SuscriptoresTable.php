@@ -51,7 +51,7 @@ class SuscriptoresTable extends DataTableComponent
             Column::make('Observaciones', 'Observaciones')
             ->searchable()
             ->sortable(),
-
+            Column::make("Tareas","tareas")
 
         ];
     }

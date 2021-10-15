@@ -66,7 +66,7 @@
 <!-- Este campo llama al archivo table-tareas.blade.php para dibujar los botones-->
 @if ($columnSelect && $this->isColumnSelectEnabled('tareas'))
     <x-livewire-tables::table.cell>
-        @include("livewire.suscripciones.table-tareas", ["suscriptores" => $row])
+        @include("livewire.suscripciones.table-tareas", ["suscripciones" => $row])
     </x-livewire-tables::table.cell>
 @endif
 

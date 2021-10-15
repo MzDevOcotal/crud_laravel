@@ -59,6 +59,8 @@ Route::middleware(['auth:sanctum', 'verified'])
     )
     ->name('telefonos-eliminar');
 
+
+
 // Ruta para Operadoras
 Route::middleware(['auth:sanctum', 'verified'])
 ->get('/operadoras',
@@ -87,12 +89,17 @@ Route::middleware(['auth:sanctum', 'verified'])
 )
 ->name('operadoras-eliminar');
 
+
+
+
 // Ruta de Suscriptorews
 Route::middleware(['auth:sanctum', 'verified'])
     ->get('/suscripciones',
         \App\Http\Livewire\SuscripcionesComponent::class
     )
     ->name('suscripciones');
+
+ 
 
         // Ruta de edición de suscriptores
 Route::middleware(['auth:sanctum', 'verified'])

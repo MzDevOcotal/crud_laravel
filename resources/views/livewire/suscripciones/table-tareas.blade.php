@@ -1,6 +1,6 @@
 <div class="p-1 mt-2 space-x-1 space-y-2">
     <a
-        wire:click="editar('{{ $suscriptores->id }}')"
+        wire:click="editar('{{ $suscripciones->id }}')"
         class="cursor-pointer inline-flex items-center
         px-4 py-2 bg-indigo-500 border border-transparent
         rounded-md font-semibold text-xs text-white
@@ -12,7 +12,7 @@
     </a>
 
     <a
-        wire:click="eliminar('{{ $suscriptores->id }}')"
+        wire:click="eliminar('{{ $suscripciones->id }}')"
         href="#"
         class="cursor-pointer inline-flex items-center px-4 py-2
         bg-red-600 border border-transparent rounded-md font-semibold
